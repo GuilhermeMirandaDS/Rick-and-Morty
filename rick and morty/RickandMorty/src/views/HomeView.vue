@@ -5,7 +5,7 @@ import ListChars from '../components/ListChars.vue';
 let chars = reactive(ref())
 
 onMounted(()=> {
-  fetch("https://rickandmortyapi.com/api/character/?page=7")
+  fetch("https://rickandmortyapi.com/api/character/?page=2")
   .then(response => response.json())
   .then(response => {
     chars.value = response.results
@@ -37,6 +37,7 @@ onMounted(()=> {
             :gender="char.gender"
             :location="char.location"          
             :url="char.url"
+            :episode="char.episode"
       ></ListChars>
     </div>
 

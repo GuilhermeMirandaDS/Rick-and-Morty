@@ -1,7 +1,5 @@
 <script setup>
     const char = defineProps(["image", "name", "status", "species", "gender", "location", "episode", "url"])
-    const idChar = char.url.split('/')[6]
-    // const eps = (char.episode.split(',')).lenght
     const urlImg = char.image
 
 </script>
@@ -15,7 +13,7 @@
           <p>Species: {{ char.species }}</p>
           <p>Gender: {{ char.gender }}</p>
           <p>Location: {{ char.location.name }}</p>
-          <p>{{ eps }}</p>
+          <p>On {{ char.episode.length }} Episodes</p>
         </div>
       </div>
 </template>
